@@ -34,7 +34,12 @@ public class PlayerHealth : MonoBehaviour
     {
         canReciveDamage = true;
     }
-   
+
+    void Start()
+    {
+        health = maxHealth;
+    }
+
     public void AddHealth(float healthToAdd)
     {
         health += healthToAdd;
