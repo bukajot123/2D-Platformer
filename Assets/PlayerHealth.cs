@@ -9,8 +9,11 @@ public class PlayerHealth : MonoBehaviour
     private bool canReciveDamage = true;
     public float invincibilityTimer = 2;
 
-    public delegate void HealthChangedHandler(float helth, float ammountChanged);
+    public delegate void HealthChangedHandler(float newHelth, float ammountChanged);
     public event HealthChangedHandler OnhealthChanged;
+
+    public delegate void OnHealthInitialisedHamdler(float newHealth);
+    public event OnHealthInitialisedHamdler OnHealthInitialised;    
 
     public void AddDamage(float damage)
     {
@@ -38,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        OnHealthInitialised?.Invoke(health);
     }
 
     public void AddHealth(float healthToAdd)
