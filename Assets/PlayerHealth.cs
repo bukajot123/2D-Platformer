@@ -12,8 +12,8 @@ public class PlayerHealth : MonoBehaviour
     public delegate void HealthChangedHandler(float newHelth, float ammountChanged);
     public event HealthChangedHandler OnhealthChanged;
 
-    public delegate void OnHealthInitialisedHamdler(float newHealth);
-    public event OnHealthInitialisedHamdler OnHealthInitialised;    
+    public delegate void OnHealthInitialisedHandler(float newHealth);
+    public event OnHealthInitialisedHandler OnHealthInitialised;    
 
     public void AddDamage(float damage)
     {

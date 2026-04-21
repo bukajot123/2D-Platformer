@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class KillSpike : MonoBehaviour
 {
-    public float damage = 1;
+    public float damage = 25;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
