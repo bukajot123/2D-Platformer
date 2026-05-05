@@ -906,6 +906,8 @@ MonoBehaviour:
   jumpForce: 10
   maxSpeed: 10
   stoppingForce: 5
+  multijump: 0
+  max_jumps: 2
 --- !u!114 &1048695803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3410,7 +3412,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6610412674875686163, guid: 8dcc5eab5b96484478902cb32611cab8, type: 3}
       propertyPath: m_Name
-      value: fallback
+      value: killvolume
       objectReference: {fileID: 0}
     - target: {fileID: 6733118023177773882, guid: 8dcc5eab5b96484478902cb32611cab8, type: 3}
       propertyPath: m_LocalPosition.x

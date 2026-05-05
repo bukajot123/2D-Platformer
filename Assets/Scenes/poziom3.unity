@@ -4209,7 +4209,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6610412674875686163, guid: 8dcc5eab5b96484478902cb32611cab8, type: 3}
       propertyPath: m_Name
-      value: fallback
+      value: killvolume
       objectReference: {fileID: 0}
     - target: {fileID: 6733118023177773882, guid: 8dcc5eab5b96484478902cb32611cab8, type: 3}
       propertyPath: m_LocalScale.x

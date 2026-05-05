@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1041836201915545862}
   - component: {fileID: 7083975002938234423}
   m_Layer: 0
-  m_Name: fallback
+  m_Name: killvolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
