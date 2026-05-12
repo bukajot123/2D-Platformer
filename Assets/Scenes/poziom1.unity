@@ -908,6 +908,8 @@ MonoBehaviour:
   stoppingForce: 5
   multijump: 0
   max_jumps: 2
+  dahForce: 15
+  dashDuration: 0.2
 --- !u!114 &1048695803
 MonoBehaviour:
   m_ObjectHideFlags: 0

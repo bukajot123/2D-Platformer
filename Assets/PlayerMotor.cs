@@ -13,13 +13,16 @@ public class PlayerMotor : MonoBehaviour
     public float stoppingForce = 5;
     public float multijump;
     public float max_jumps = 2;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float dahForce = 10;
+    private float dashTime;
+    public float dashDuration = 0.2f;
+
+   
     private void Start()
     {
         rigidbody2D= GetComponent<Rigidbody2D>();
     }
-    // Update is called once per frame
+    
     private void FixedUpdate()
     {
         MovePLayer();
@@ -34,6 +37,11 @@ public class PlayerMotor : MonoBehaviour
 
     private void HandleMaxSpeed()
     {
+        if (dashTime > 0)
+        {
+            dashTime -= Time.fixedDeltaTime;
+            return; 
+        }
         if (rigidbody2D.linearVelocityX >= maxSpeed)
         {
             rigidbody2D.linearVelocityX = maxSpeed;
@@ -81,5 +89,28 @@ public class PlayerMotor : MonoBehaviour
        canJump = true;
         multijump = max_jumps;
     }
+
+    private void OnDash()
+    {
+        float dashDirection;
+
+        if (direction.x != 0)
+        {
+            
+            dashDirection = direction.x;
+        }
+        else
+        {
+            
+            dashDirection = 2f;
+        }
+
+        rigidbody2D.AddForce(new Vector2(dashDirection * dahForce, 0), ForceMode2D.Impulse);
+        dashTime = dashDuration;
+
+        Debug.Log("Dash w kierunku: " + dashDirection);
+    }
+
+
 }
 
